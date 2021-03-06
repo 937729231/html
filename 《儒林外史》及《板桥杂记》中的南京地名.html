@@ -1,0 +1,547 @@
+<!DOCTYPE html>  
+<html>
+<head>  
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>《儒林外史》及《板桥杂记》中的南京地名</title>  
+<style type="text/css">  
+html{height:100%}  
+body{height:90%;margin:0px;padding:0px}  
+#container{height:100%} 
+h1{height:5%; text-align:center}
+</style>  
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=dWyGDQclFV6GXA35fFpYMTEBwvmlHzvb">
+//v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"
+</script>
+</head>  
+ <h1>《儒林外史》及《板桥杂记》中的南京地名</h1> 
+<body>
+ 
+	
+<div id="container"></div> 
+<script type="text/javascript"> 
+var map = new BMap.Map("container");
+// 创建地图实例  
+var point = new BMap.Point(118.80, 32.02);
+// 创建点坐标  
+map.centerAndZoom(point, 13);
+// 初始化地图，设置中心点坐标和地图级别  
+	map.enableScrollWheelZoom(true);
+	
+	var myStyleJson=[
+		{
+    "featureType": "poilabel",
+    "elementType": "labels",
+    "stylers": {
+        "visibility": "off"
+    }
+}, {
+    "featureType": "poilabel",
+    "elementType": "labels.icon",
+    "stylers": {
+        "visibility": "off"
+    }
+}]	 
+map.setMapStyle({styleJson: myStyleJson }); 
+	
+	
+map.addControl(new BMap.NavigationControl());    
+map.addControl(new BMap.ScaleControl());    
+map.addControl(new BMap.OverviewMapControl());    
+map.addControl(new BMap.MapTypeControl());  
+	
+var myIcon1 = new BMap.Icon("1.png", new BMap.Size(30,36));	
+var myIcon3 = new BMap.Icon("3.png", new BMap.Size(15,18));		
+
+var point1 = new BMap.Point(118.823576,32.153034);        
+var marker = new BMap.Marker(point1,{icon:myIcon3});  // 创建标注
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts1 = {
+	  width : 700,     // 信息窗口宽度
+	  height: 350,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>燕子矶</h4>" , // 信息窗口标题
+	}
+	var infoWindow1 = new BMap.InfoWindow("介绍：燕子矶位于南京市栖霞区观音门外，作为长江三大名矶之首，燕子矶有着“万里长江第一矶”的称号。燕子矶是岩山东北的一支，形似燕子展翅欲飞，故名为燕子矶。在古代是重要渡口。 “燕矶夕照”为清初金陵四十八景之一。燕子矶附近有弘济寺、观音阁等建筑。岩山有12洞，为江水冲击而成，大多是悬崖绝壁。其中以三台洞最为深广曲深。</p>文本链接：</p>《第二十二回 认祖孙玉圃联宗　爱交游雪斋留客》(牛浦郎）也不到卜家告说，竟搭了江船。恰好遇顺丰，一日一夜就到了南京燕子矶。要搭扬州船，来到一个饭店里。</p>《第三十五回 圣天子求贤问道　庄征君辞爵还家》庄征君遇着顺风，到了燕子矶，自己欢喜道：“我今日复见江出佳丽了！”叫了一只凉蓬船载了行李，一路荡到汉西门。</p>《第四十一回 庄濯江话旧秦淮河　沈琼枝押解江都县》船家不敢言语，向别人称完了，开船到了燕子矶</p>", opts1);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow1,point1); //开启信息窗口
+	});
+
+var point2 = new BMap.Point(118.805614,32.028627);        
+var marker = new BMap.Marker(point2,{icon:myIcon1});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts2 = {
+	  width : 1000,     // 信息窗口宽度
+	  height: 510,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>东水关、西水关</h4>" , // 信息窗口标题
+	}
+	var infoWindow2 = new BMap.InfoWindow("介绍：东水关是南京明城墙的两座明代京城水关之一，与西水关相对，位于南京市秦淮区龙蟠中路通济门大桥西侧，地处夫子庙秦淮风光带，是秦淮河流入南京城的入口，也是南京城墙唯一的船闸入口，是古代南京保存至今的一座最大的水关。</p>东水关遗址公园修复工程是2001年南京市政府重点工程之一，公园占地面积4.15公顷，其中陆地面积2.6公顷，水域面积1.55公顷。建筑遗迹由水闸、桥道、藏兵洞、明城墙四部分组成，修复工程充分体现了秦淮的古都特色。</p>西水关是南京明城墙的两座明代京城水关之一，1960年代受拆城风波影响整体拆除</p>文本链接：</p>《第二十四回 牛浦郎牵连多讼事　鲍文卿整理旧生涯》城里一道河，东水关到西水关，足有十里，便是秦淮河。</p>《第三十三回 杜少卿夫妇游山　迟衡山朋友议礼》当下走过淮清桥。迟衡山路熟，找着房牙子一路看了几处河房，多不中意，一直看到东水关</p>《第四十一回 庄濯江话旧秦淮河　沈琼枝押解江都县》自文德桥至利涉桥、东水关，夜夜笙歌不绝。又有那些游人买了水老鼠花在河内放，那水花直站在河里，放出来就和一树梨花一般。每夜直到四更时才歇。</p>《第四十回 萧云仙广武山赏雪　沈琼枝利涉桥卖文》满城的人都叫了船，请了大和尚在船上悬挂佛像，铺设经坛，从西水关起一路施食到进香河。</p>", opts2);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow2,point2); //开启信息窗口
+	});	
+	
+var myIcon2 = new BMap.Icon ("2.png",new BMap.Size(30,36))
+var point3 = new BMap.Point(118.755304,32.068474);        
+var marker = new BMap.Marker(point3,{icon:myIcon2});  // 创建标注
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts3 = {
+	  width : 1200,     // 信息窗口宽度
+	  height: 1200,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>秦淮河</h4>" , // 信息窗口标题
+	}
+	var infoWindow3 = new BMap.InfoWindow( 
+		"<img style='float:right;margin:4px'  src='4.jpg' width='288' height='216'/>"+
+		"介绍：秦淮河是南京古老文明的摇篮，南京的母亲河，历史上极富盛名。这里素为“六朝烟月之区，金粉荟萃之所”，更兼十代繁华之地，“衣冠文物，盛于江南；文采风流，甲于海内”，被称为“中国第一历史文化名河”。</p>夫子庙秦淮风光带以夫子庙古建筑群为中心、十里秦淮为轴线、明城墙为纽带，串联起众多文物保护单位，以儒家思想与科举文化、民俗文化等为内涵，集自然风光、山水园林、庙宇学堂、街市民居、乡土人情、美食购物、科普教育、节庆文化于一体</p>"+
+										  "文本链接：</p>板桥杂记：</p>【风俗】秦淮灯船之盛，天下所无。两岸河房，雕栏画槛，绮窗丝障，十里珠帘。主称既醉，客曰未晞。游揖往来，指目曰：某名姬在某河房，以得魁首者为胜。薄暮须臾，灯船毕集，火龙蜿蜒，光耀天地，扬槌击鼓，蹋顿波心。自聚宝门水关至通济门水关，喧阗（同“甜”音，声音大。）达旦。桃叶渡口，争渡者喧声不绝。</p>"+
+										  "嘉兴姚北若，用十二楼船于秦淮，招集四方应试知名之土百余人，每船邀名妓四人侑酒，梨园一部，灯火笙歌，为一时之盛事。</p>儒林外史</p>《第二十四回 牛浦郎牵连多讼事　鲍文卿整理旧生涯》鲍文卿在京没有靠山，他本是南京人，只得收拾行李回南京来。 这南京，乃是太祖皇帝建都的所在。里城门十三，外城门十八，穿城四十里，沿城一转足有一百二十多里。城里几十条大街，几百条小巷，都是人烟凑集，金粉楼台。城里一道河，东水关到西水关，足有十里，便是秦淮河。水满的时候，画船箫鼓，昼夜不绝。城里城外，琳宫梵宇，碧瓦朱甍。在六朝时是四百八十寺，到如今，何止四千八百寺！大街小巷，合共起来，大小酒楼有六七百座，茶社有一千余处。不论你走到一个僻巷里面，总有一个地方悬着灯笼卖茶，插着时鲜花朵，烹着上好的雨水。茶社里，坐满了吃茶的人。到晚来，两边酒楼上明角灯，每条街上足有数千盏，照耀如同白日，走路人并不带灯笼。那秦淮到了有月色的时候，越是夜色已深，更有那细吹细唱的船来，凄清委婉，动人心魄。两边河房里住家的女郎，穿了轻纱衣服，头上簪了茉莉花，一齐卷起湘帘，凭栏静听。</p>", opts3);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow3,point3); //开启信息窗口
+	});	
+
+var point4 = new BMap.Point(118.758862,32.038771);        
+var marker = new BMap.Marker(point4,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts4 = {
+	  width : 1000,     // 信息窗口宽度
+	  height: 550,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>水西门</h4>" , // 信息窗口标题
+	}
+	var infoWindow4 = new BMap.InfoWindow("介绍：水西门是南京明城墙十三座明代京城城门之一，原名三山门。上世纪五六十年代，席卷全国的拆城运动波及南京，水西门结构陆续遭到拆除如今的水西门遗址辟有水西门广场，众多城市干道在此交汇。</p>文本链接：</p>《第二十四回 牛浦郎牵连多讼事　鲍文卿整理旧生涯》这鲍文卿住在水西门。水西门与聚宝门相近。他（鲍文卿）家本是几代的戏行，如今仍旧做这戏行营业。他这戏行里，淮清桥是三个总寓，一个老郎庵。水西门是一个总寓，一个老郎庵。总寓内，都挂着一班一班的戏子牌。凡要定戏，先几日，要在牌上写一个日子。鲍文卿却是水西门总寓挂牌。</p>《第二十五回 鲍文卿南京遇旧　倪廷玺安庆招亲》又过了几日，（鲍文卿）在水西门搭船。</p>《第二十八回 季苇萧扬州入赘　萧金铉白下选书》季恬逸请他坐在那里，自己走上街来。心里想道：“这些人虽常来在这里，却是散在各处。这一会没头没脑往那里去捉？可惜季苇萧又不在这里。”又想道：“不必管他！我如今只望着水西门一路大街走，遇着那个就捉了来，且混他些东西吃吃再说。”主意已定，一直走到水西门口，只见一个人，押着一担行李进城当下，三人会了茶钱一同出来，到三山街一个大酒楼上。</p>《第三十回 爱少俊访友神乐观　逞风流高会莫愁湖》季苇萧道：“我们而今先商议是个什么地方。”鲍廷玺道：“门下在水西门住，水西门外最熟。”</p>《第四十八回 徽州府烈妇殉夫　泰伯祠遗贤感旧》王玉辉到了苏州，又换了船，一路来到南京水西门上岸，进城寻了个下处，在牛公庵住下。</p>", opts4);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow4,point4); //开启信息窗口
+	});	
+
+var point5 = new BMap.Point(118.788219,32.018965);        
+var marker = new BMap.Marker(point5,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts5 = {
+	  width : 600,     // 信息窗口宽度
+	  height: 250,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>聚宝门</h4>" , // 信息窗口标题
+	}
+	var infoWindow5 = new BMap.InfoWindow("介绍：中华门是南京明城墙十三座明代京城城门之一，原名聚宝门，位于南京市秦淮区中华路南端，坐北朝南，是中国现存规模最大的城门，古代防御性建筑的杰出代表，在世界城垣建筑史上占有重要地位，也是世界上保存最完好、结构最复杂、规模最大的堡垒瓮城，有“天下第一瓮城”之称。</p>文本链接：</p>《第二十四回 牛浦郎牵连多讼事　鲍文卿整理旧生涯》这鲍文卿住在水西门。水西门与聚宝门相近。这聚宝门，当年说每日进来有百牛千猪万担粮，到这时候何止一千个牛，一万个猪，粮食更无其数。", opts5);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow5,point5); //开启信息窗口
+	});	
+	
+var point6 = new BMap.Point(118.801113,32.029777);        
+var marker = new BMap.Marker(point6,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts6 = {
+	  width : 900,     // 信息窗口宽度
+	  height: 450,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>淮清桥</h4>" , // 信息窗口标题
+	}
+	var infoWindow6 = new BMap.InfoWindow("介绍：淮清桥位于南京市秦淮区建康路东段，是一座石拱桥，始建于南朝，古名青溪大桥，后称淮清桥，至今已有千余年历史，是南京市文物保护单位。</p>文本链接：</p>《第二十四回 牛浦郎牵连多讼事　鲍文卿整理旧生涯》他（鲍文卿）家本是几代的戏行，如今仍旧做这戏行营业。他这戏行里，淮清桥是三个总寓，一个老郎庵。</p>《第二十七回 王太太夫妻反目　倪廷珠兄弟相逢》鲍廷玺喜从天降，就同阿三一直走到淮清桥抚院公馆前。阿三道：“六太爷，请到河底下茶馆里坐着，我去请大太爷来会。”一直去了。</p>《第三十三回 杜少卿夫妇游山　迟衡山朋友议礼》当下走过淮清桥。迟衡山路熟，找着房牙子一路看了几处河房，多不中意，一直看到东水关。</p>《第四十一回 庄濯江话旧秦淮河　沈琼枝押解江都县》汉子叫道：“细姑娘同顺姑娘来了，李老四也亲自送了来。南京水西门进来生意如何？”李老四道：“进来被淮清桥那些开三嘴行的挤坏了，所以来投奔老爹。”</p>《第四十二回 公子妓院说科场　家人苗疆报信息》到初八早上，把这两顶旧头巾叫两个小子戴在头上，抱着篮子到贡院前伺候。一路打从淮清桥过，那赶抢摊的摆着红红绿绿的封面，都是萧金铉、诸葛天申、季恬逸、匡超人、马纯上、蘧駪夫选的时文。</p>", opts6);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow6,point6); //开启信息窗口
+	});	
+	
+var point7 = new BMap.Point(118.789992,32.064941);        
+var marker = new BMap.Marker(point7,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts7 = {
+	  width : 600,     // 信息窗口宽度
+	  height: 300,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>鼓楼</h4>" , // 信息窗口标题
+	}
+	var infoWindow7 = new BMap.InfoWindow("介绍：南京鼓楼，位于南京市中心明城墙内中央的鼓楼岗上，始建于明朝洪武十五年（1382年），是旧时南京城的报时中心，也是催促文武百官勤于政务，提醒百姓辛于劳作，京师迎王、接诏书、选妃等重大庆典的重要建筑，是明朝京师的重要建筑和象征，也是中国古代官式砖构建筑的代表。</p>文本链接：</p>《第二十五回 鲍文卿南京遇旧　倪廷玺安庆招亲》话说鲍文卿到城北去寻人，觅孩子学戏。走到鼓楼坡上，他才上坡，遇着一个人下坡。</p>《第三十四回 议礼乐名流访友　备弓旌天子招贤》这日，鼓楼街薛乡绅家请酒，杜少卿辞了不到，迟衡山先到了</p>", opts7);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow7,point7); //开启信息窗口
+	});	
+	
+var point8 = new BMap.Point(118.77305,32.086441);        
+var marker = new BMap.Marker(point8,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts8 = {
+	  width : 600,     // 信息窗口宽度
+	  height: 300,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>三牌楼</h4>" , // 信息窗口标题
+	}
+	var infoWindow8 = new BMap.InfoWindow("介绍:三牌楼位于南京市鼓楼区中部，相传明朝时期这里曾建有三座宏伟的牌楼，故名三牌楼。</p>文本链接：</p>《第二十五回 鲍文卿南京遇旧　倪廷玺安庆招亲》那人道：“远哩，舍下在三牌楼”鲍文卿道：“倪老爹，你这修补乐器，三弦、琵琶都可以修得么？”倪老爹道：“都可以修得的。”鲍文卿道：“在下姓鲍，舍下住在水西门…”</p>《第五十五回 添四客述往思来　弹一曲高山流水》又一个是卖火纸筒子的。这人姓王名太，他祖代是三牌楼卖菜的，到他父亲手里穷了，把菜园都卖掉了。</p>", opts8);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow8,point8); //开启信息窗口
+	});
+	
+var point9 = new BMap.Point(118.792686,32.034986);        
+var marker = new BMap.Marker(point9,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts9 = {
+	  width : 500,     // 信息窗口宽度
+	  height: 250,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>内桥</h4>" , // 信息窗口标题
+	}
+	var infoWindow9 = new BMap.InfoWindow("介绍：内桥位于南京市秦淮区新街口南，是南京市文物保护单位，因系南唐国都的宫城（大内）所直之桥，故称内桥。</p>文本链接：</p>《第二十五回 鲍文卿南京遇旧　倪廷玺安庆招亲》鲍文卿道：”…内桥有个人家，定了明日的戏。…”</p>《第二十八回 季苇萧扬州入赘　萧金铉白下选书》处存身，太太只得在内桥娘家胡姓借了一间房子。搬进去住着</p>", opts9);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow9,point9); //开启信息窗口
+	});
+
+	var point10 = new BMap.Point(118.79719,32.027406);        
+var marker = new BMap.Marker(point10,{icon:myIcon2});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts10 = {
+	  width : 800,     // 信息窗口宽度
+	  height: 400,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>江南贡院</h4>" , // 信息窗口标题
+	}
+	var infoWindow10 = new BMap.InfoWindow("介绍：位于江苏南京市，是夫子庙地区三大古建筑群之一。始建于南宋（1169年），是县、府学考试场所。朱元璋定都南京后，乡试、会试都集中在南京举行，回此，县学、府学必须另建考棚。当时东边营的下江考棚，原为江宁县学考场，鸡鸣山下南京市政府大院是上元县县学考场。明成祖1421年迁都北京，但南京仍为陪都，而江南又是人文荟萃之地，考试仍在此按期举行。这时成祖又继续派人建造江南贡院。明清两代对贡院均有扩建，到清光绪年间，贡院占地达数万平方米。其规模之庞大，为当时全国23个行省的贡院之最。</p>"+
+										   "文本链接：</p>板桥杂记：【风俗】逢秋风桂子之年，四方应试者毕集，结驷连骑，选色征歌，转车子之喉，按阳阿之舞，院本之笙歌合奏，迥舟之一水皆香。或邀旬日之欢，或订百年之约。</p>儒林外史：《第二十五回 鲍文卿南京遇旧　倪廷玺安庆招亲》那人道：“是。太爷公馆在贡院门口张家河房里，请鲍师父在那里去相会。”</p>《第四十二回 公子妓院说科场　家人苗疆报信息》到初八早上，把这两顶旧头巾叫两个小子戴在头上，抱着篮子到贡院前伺候。一路打从淮清桥过，那赶抢摊的摆着红红绿绿的封面，都是萧金铉、诸葛天申、季恬逸、匡超人、马纯上、蘧駪夫选的时文。</p>", opts10);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow10,point10); //开启信息窗口
+	});
+	
+var point13 = new BMap.Point(118.795165,32.028667);        
+var marker = new BMap.Marker(point13,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts13 = {
+	  width : 600,     // 信息窗口宽度
+	  height: 300,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>状元境</h4>" , // 信息窗口标题
+	}
+	var infoWindow13 = new BMap.InfoWindow("介绍：状元境位于南京市秦淮区夫子庙附近，东起贡院西街，西至教敷营，是一条全长192米的道路。状元境以南宋秦桧的儿子秦熺，孙子秦埙两状元居此而得名。</p>文本链接：</p>《第二十八回 季苇萧扬州入赘　萧金铉白下选书》季苇萧向他说：“姑老爷到南京，千万寻到状元境，劝我那朋友季恬逸回去。南京这地方，是可以饿的死人的，万不可久住！”说毕，送了出来。</p>《第三十三回 杜少卿夫妇游山　迟衡山朋友议礼》走到状元境，只见书店里帖了多少新封面，内有一个写道：“《历科程墨持运》。处州马纯上、嘉兴蘧駪夫同选。”</p>", opts13);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow13,point13); //开启信息窗口
+	});
+	
+	
+var point15 = new BMap.Point(118.789441,32.015439);        
+var marker = new BMap.Marker(point15,{icon:myIcon1});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts15 = {
+	  width : 1000,     // 信息窗口宽度
+	  height: 600,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>报恩寺</h4>" , // 信息窗口标题
+	}
+	var infoWindow15 = new BMap.InfoWindow("介绍：大报恩寺位于南京市秦淮区中华门外，是中国历史上最为悠久的佛教寺庙，其前身是东吴赤乌年间（238─250年）建造的建初寺及阿育王塔，是继洛阳白马寺之后中国的第二座寺庙，也是中国南方建立的第一座佛寺，中国的佛教中心，与灵谷寺、天界寺并称为金陵三大寺，下辖百寺。报恩寺遗址公园位于南京市秦淮区中华门外，总占地面积260.5亩，总建筑面积15万平方米，投资50.25亿元，遗址重建工程主要包括遗址博物馆、南京佛教文化博物馆、报恩新塔、佛教文化创意工坊、明清街区等。</p>文本链接：</p>《第二十八回 季苇萧扬州入赘　萧金铉白下选书》萧金铉道：“要僻地方，只有南门外报恩寺里好，又不吵闹，房子又宽，房钱又不十分贵。我们而今吃了饭，竟到那里寻寓所。</p>三人一路走出了南门。那南门热闹轰轰，真是车如游龙，马如流水！三人挤了半日，才挤了出来。望着报恩寺走了进去。</p>吃过，同三位出来闲步，说道：“我们就到三藏禅林里玩玩罢。”当下走进三藏禅林。头一进是极高的大殿，殿上金字匾额：“天下第一祖庭”。一直走过两间房子，又曲曲折折的阶级栏杆，走上一个楼去。只道是没有地方了，僧官又把楼背后开了两扇门，叫三人进去看，那知还有一片平地在极高的所在，四处都望着。内中又有参天的大木，几万竿竹子，那风吹的到处飕飕的响，中间便是唐玄奘法师的衣钵塔。</p>《第二十九回 诸葛佑僧寮遇友　杜慎卿江郡纳姬》郭铁笔在报恩寺门口租了一间房，开图书店。</p>《第四十八回 徽州府烈妇殉夫　泰伯祠遗贤感旧》两人（邓质夫、王玉辉）又到报恩寺玩玩，在琉璃塔下吃了一壶茶。出来，寺门口酒楼上吃饭。</p>《第五十五回 添四客述往思来　弹一曲高山流水》那老爹会了帐，打发小菜钱，一径踱进报恩寺里。大殿南廊、三藏禅林、大锅都看了一回。</p>", opts15);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow15,point15); //开启信息窗口
+	});
+	
+var point16 = new BMap.Point(118.788054,32.004004);        
+var marker = new BMap.Marker(point16,{icon:myIcon1});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts16 = {
+	  width : 800,     // 信息窗口宽度
+	  height: 400,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>雨花台</h4>" , // 信息窗口标题
+	}
+	var infoWindow16 = new BMap.InfoWindow("介绍：雨花台风景区又名雨花台风景名胜区，简称雨花台。雨花台是新民主主义革命的纪念圣地，建有纪念性陵园。是以自然山林为依托，以红色旅游为主体，融和自然风光和人文景观为一体的全国独具特色的纪念性风景名胜区。有雨花阁、甘露井、甘露井亭、二忠祠、乾隆御碑亭、李杰墓、明太监义会碑、杨邦乂剖心处、方孝孺墓、木末亭、辛亥革命人马合冢、木樨苑、曦园、怡苑、梅岗、雨花石博物馆、江苏省国家安全教育展览馆等20余处名胜古迹和楼台亭阁馆。</p>《第二十九回 诸葛佑僧寮遇友　杜慎卿江郡纳姬》萧金铉道：“慎卿兄，我们还到雨花台岗儿上走走。”杜慎卿道：“这最有趣。”一同步上岗子，在各庙宇里，见方、景诸公的祠，甚是巍峨。又走到山顶上，望着城内万家烟火，那长江如一条白练，琉璃塔金碧辉煌，照人眼目。</p>坐了半日，日色已经西斜，只见两个挑粪桶的，挑了两担空桶歇在山上。这一个拍那一个肩头道：“兄弟，今日的货已经卖完了，我和你到永宁泉吃一壶水。回来，再到雨花台看看落照。”杜慎卿笑道：“真乃菜佣酒保都有六朝烟水气，一点也不差。”当下下了岗子回来。进了寺门，诸葛天申道：“且到我们下处坐坐。”</p>《第五十五回 添四客述往思来　弹一曲高山流水》了茶钱走出来，从冈子上踱到雨花台左首，望见泰伯祠的大殿，屋山头倒了半边。两人慢慢走了出来。邻居老爹道：“我们顺便上雨花台绝顶。”望着隔江的山色，岚翠鲜明，那江中来往的船只、帆樯历历可数。那一轮红日，沉沉的傍着山头，下去了。</p>", opts16);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow16,point16); //开启信息窗口
+	});
+	
+var point17 = new BMap.Point(118.792506,32.030077);        
+var marker = new BMap.Marker(point17,{icon:myIcon1});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts17 = {
+	  width : 800,     // 信息窗口宽度
+	  height: 400,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>承恩寺</h4>" , // 信息窗口标题
+	}
+	var infoWindow17 = new BMap.InfoWindow("介绍：南京三山街路口东北一侧的水游城，如今已是集餐饮、购物、住宿、休闲等于一体的商贸中心。然而，五百多年前的明代中前期，在水游城及其北面，曾建造了一座当时名气很大且是皇帝敕赐的禅院——承恩寺</p>文本链接：</p>《第三十回 爱少俊访友神乐观　逞风流高会莫愁湖》当晚，季苇萧因在城里承恩寺作寓，看天黑，赶进城去了。</p>《第三十四回 议礼乐名流访友　备弓旌天子招贤》小厮道：“他说，少爷的文书已经到了。李大老爷吩咐县里邓老爷，请少爷到京里去做官。邓老爷现住在承恩寺。”</p>《第四十六回 三山门贤人饯别　五河县势利熏心》汤镇台道：“家居无事，偶尔来京，借此会会诸位高贤。鄙寓在承恩寺。弟就要去拜虞博士并庄征军贤竹林。”</p>《第五十回 假官员当街出丑　真义气代友求名》凤四老爹又叫万中书，亲自到承恩寺起了行李来，风四老爹也收拾了行李，同着三个差人，竟送万中书回浙江台州，去审官司去了。</p>", opts17);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow17,point17); //开启信息窗口
+	});	
+
+var point18 = new BMap.Point(118.823612,32.066267);        
+var marker = new BMap.Marker(point18,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts18 = {
+	  width : 500,     // 信息窗口宽度
+	  height: 250,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>神乐观</h4>" , // 信息窗口标题
+	}
+	var infoWindow18 = new BMap.InfoWindow("介绍：明神乐观被列入金陵四十八景之一，景曰“神乐仙都”。明神乐观今无处可寻，仅存六角井栏、赑屃及澧泉碑遗物，赑屃经过历史风雨，已伤痕累累，但作为明神乐观遗址的见证幸存至今，这两处遗物原保存于今天坛新村江苏冶金机械厂内，现迁移于白马石刻公园内保护。</p>文本链接：</p>《第三十回 爱少俊访友神乐观　逞风流高会莫愁湖》杜慎卿道：“他住在那里？”季苇萧道：“他在神乐观。”</p>", opts18);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow18,point18); //开启信息窗口
+	});	
+
+var point19 = new BMap.Point(118.767697,32.042376);        
+var marker = new BMap.Marker(point19,{icon:myIcon3});  // 创建标注	
+
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts19 = {
+	  width : 500,     // 信息窗口宽度
+	  height: 250,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>莫愁湖</h4>" , // 信息窗口标题
+	}
+	var infoWindow19 = new BMap.InfoWindow("介绍：莫愁湖位于南京市建邺区，是一座有着1500年悠久历史和丰富人文资源的江南古典名园，为六朝胜迹，有“江南第一名湖”、“金陵第一名胜”、“金陵四十八景之首”等美誉。</p>文本链接：</p>《第三十回 爱少俊访友神乐观　逞风流高会莫愁湖》季苇萧道：“我们而今先商议是个什么地方。”鲍廷玺道：“门下在水西门住，水西门外最熟。门下去借莫愁湖的湖亭，那里又宽敞，又凉快。”到初三那日，发了两班戏箱在莫愁湖。</p>", opts19);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow19,point19); //开启信息窗口
+	});	
+
+var point20 = new BMap.Point(118.779352,32.035224);        
+var marker = new BMap.Marker(point20,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts20 = {
+	  width : 500,     // 信息窗口宽度
+	  height: 250,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>仓巷</h4>" , // 信息窗口标题
+	}
+	var infoWindow20 = new BMap.InfoWindow("介绍：仓巷位于南京市秦淮区朝天宫正南，北起建邺路南接升州路。因直通苑仓得名，又叫将军仓巷，苑仓是三国孙权时重要的粮仓。仓巷北端有一仓桥，又称崇道桥，因冶山道院得名。清同治建江宁学府，改叫道济桥。仓巷如今为南京文玩市场所在。</p>文本链接：</p>《第三十三回 杜少卿夫妇游山　迟衡山朋友议礼》（杜少卿）到了仓巷里外祖卢家，表侄卢华士出来迎请表叔进去，到厅上见礼。</p>", opts20);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow20,point20); //开启信息窗口
+	});	
+	
+
+var point22= new BMap.Point(118.767278,32.056272);        
+var marker = new BMap.Marker(point22,{icon:myIcon1});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts22 = {
+	  width : 700,     // 信息窗口宽度
+	  height: 300,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>清凉山</h4>" , // 信息窗口标题
+	}
+	var infoWindow22 = new BMap.InfoWindow("介绍：清凉山古名石头山、石首山、石头城，有“六朝胜迹”之称，园内众多的名胜古迹和历史文化遗址，形成了深厚的历史文化底蕴。诸葛亮曾称金陵形势为“虎踞龙蟠”，虎踞就指今清凉山。</p>《第三十三回 杜少卿夫妇游山　迟衡山朋友议礼》厨子挑了酒席，借清凉山一个姚园。这姚园是个极大的园子，进去一座篱门；篱门内，是鹅卵石砌成的路，一路朱红栏杆，两边绿柳掩映，过去三间厅，便是他卖酒的所在。那日把酒桌子都搬了。过厅便是一路山径，上到山顶便是一个八角亭子。席摆在亭子上。娘子和姚奶奶一班人上了亭子观看景致。一边是清凉山，高高下下的竹树。</p>《第四十一回 庄濯江话旧秦淮河　沈琼枝押解江都县》七月二十九日，清凉山地藏胜会。人都说，地藏菩萨一年到头都把眼闭着，只有这一夜才睁开眼，若见满城都摆的香花灯烛，他就只当是一年到头都是如此，就欢喜这些人好善，就肯保佑人。所以这一夜南京人各家门户，都搭起两张桌子来，两枝通宵风烛，一座香斗，从大中桥到清凉山，一条街有七八里路，点得像一条银龙。一夜的亮，香烟不绝，大风也吹不熄。倾城士女都出来烧香看会。</p>《第五十五回 添四客述往思来　弹一曲高山流水》那一日，妙意庵做会。那庵临着乌龙潭。正是初夏的天气，一潭簇新的荷叶，亭亭浮在水上。这庵里曲曲折折，也有许多亭榭，那些游人都进来玩耍。</p>", opts22);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow22,point22); //开启信息窗口
+	});
+	
+var point23= new BMap.Point(118.79371,32.057009);        
+var marker = new BMap.Marker(point23,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts23 = {
+	  width : 700,     // 信息窗口宽度
+	  height: 300,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>北门桥</h4>" , // 信息窗口标题
+	}
+	var infoWindow23 = new BMap.InfoWindow("介绍：北门桥位于南京市玄武区珠江路和北门桥路交叉路口南侧，长21.5米，宽17.3米，石拱结构，为明代重修。北门桥的热闹，与十里秦淮夫子庙的热闹是两码事。夫子庙画舫夜歌，流的是金，淌的是银，万千的奢华气象。北门桥则不然，它好比百姓人家的春八鲜，没什么珍馐异馔，但花样丰富，货色水灵。又似乡间的露水集，热闹就在黎明那会儿一阵子。太阳一出来，大家又去忙活别的生计。“醉生梦死”四个字，和此地无论如何搭不上界。</p>文本链接：</p>《第三十三回 杜少卿夫妇游山　迟衡山朋友议礼》次日，（杜少卿）便到北门桥去拜庄绍光先生。</p>《第三十四回 议礼乐名流访友　备弓旌天子招贤》当下两人（杜少卿、迟衡山）坐了一只凉篷船，到了北门桥。</p>", opts23);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow23,point23); //开启信息窗口
+	});
+	
+var point24= new BMap.Point(118.773344,32.047853);        
+var marker = new BMap.Marker(point24,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts24 = {
+	  width : 700,     // 信息窗口宽度
+	  height: 350,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>汉西门</h4>" , // 信息窗口标题
+	}
+	var infoWindow24 = new BMap.InfoWindow("介绍：汉西门，又称石城门，为南京明城墙明代十三座内城门之一，位于民国时期增辟的汉中门以南，现位于汉中门广场内。城门坐东面西，由两道瓮城、三通城门组成，门内有汉西门大街。如今人们以汉中门来统称包括汉西门在内的这一地段。原汉中门在20世纪70年代末开辟虎踞路时拆除。保住了汉西门中蔚为壮观的主体建筑西门座。从而，使今日之汉中门休闲广场保有了文化的深层蕴含。确保了对游人的吸引力。</p>文本链接：</p>《第三十四回 议礼乐名流访友　备弓旌天子招贤》庄绍光悄悄叫了一乘小轿，带了一个小厮，脚子挑了一担行李，从后门老早就出汉西门去了。</p>《第三十五回 圣天子求贤问道　庄征君辞爵还家》庄征君遇着顺风，到了燕子矶，自己欢喜道：“我今日复见江出佳丽了！”叫了一只凉蓬船载了行李，一路荡到汉西门.</p>《第四十一回 庄濯江话旧秦淮河　沈琼枝押解江都县》当下，沈琼枝同两个差人出了县门，雇轿子抬到汉西门外，上了仪征的船。</p>", opts24);  // 创建信息窗口对象
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow24,point24); //开启信息窗口
+	});
+	
+var point25= new BMap.Point(118.803993,32.076375);        
+var marker = new BMap.Marker(point25,{icon:myIcon1});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts25 = {
+	  width : 800,     // 信息窗口宽度
+	  height: 400,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>元武湖（玄武湖）</h4>" , // 信息窗口标题
+	}
+	var infoWindow25 = new BMap.InfoWindow("介绍：玄武湖位于南京市玄武区，东枕紫金山、西靠明城墙、北邻南京站、南倚覆舟山，是江南地区最大的城内公园，也是中国最大的皇家园林湖泊、仅存的江南皇家园林，被誉为“金陵明珠”，又称后湖、北湖。 玄武湖的人文历史最早可追溯至先秦时期；六朝时，成为皇帝操阅水师的场所，并被辟为皇家园林，南岸建有华林园、乐游苑等皇家宫苑；北宋时，江宁府尹王安石“废湖还田”，玄武湖因此消失二百多年；元朝时，经过两次疏浚，玄武湖重新出现；明朝时，设为后湖黄册库，系皇家禁地。</p>文本链接：</p>《求贤问道　庄征君辞爵还家》天子叹息了一回，随教大学士传旨：“庄尚志允令还山，赐内帑银五百两。将南京元武湖赐与庄尚志著书立说，鼓吹休明。”</p>当下商议料理，和娘子连夜搬到元武湖去住。 这湖是极宽阔的地方，和西湖也差不多大。左边台城望见鸡鸣寺。那湖中菱、藕、莲、芡每年出几千石。湖内七十二只打鱼船，南京满城每早卖的，都是这湖鱼。湖中间五座大洲：四座洲贮了图籍；中间洲上一所大花园赐与庄征君住，有几十间房子。园里合抱的老树，梅花、桃、李、芭蕉、桂、菊，四时不断的花；又有一园的竹子，有数万竿。园内轩窗四启，看着湖光山色，真如仙境。门口系了一只船，要往那边，在湖里渡了过去。若把这船收过，那边飞也飞不过来。庄征君就住在花园。</p>", opts25);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow25,point25); //开启信息窗口
+	});
+	
+
+var point27= new BMap.Point(118.800827,32.029329);        
+var marker = new BMap.Marker(point27,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts27 = {
+	  width : 700,     // 信息窗口宽度
+	  height: 400,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>利涉桥</h4>" , // 信息窗口标题
+	}
+	var infoWindow27 = new BMap.InfoWindow("介绍：现已不存。</p>文本链接：</p>《第三十六回 祭先圣南京修礼　送孝子西蜀寻亲》虞博士道：“…少卿就在这里么？”武书道：“他现住在利涉桥河房里。</p>《第三十七回 祭先圣南京修礼　送孝子西蜀寻亲》武书辞了出去，才走到利涉桥，遇见一个人，头戴方巾，身穿旧布直裰，腰系丝绦，脚下芒鞋，身上掮着行李，花白胡须，憔悴枯槁。</p>《第四十一回 庄濯江话旧秦淮河　沈琼枝押解江都县》至利涉桥、东水关，夜夜笙歌不绝。又有那些游人买了水老鼠花在河内放，那水花直站在河里，放出来就和一树梨花一般。少卿道：“正字兄，我和你先到淡冷处走走。”叫船家一路荡到进香河，又荡了回来，慢慢吃酒。吃到下午时候，两人都微微醉了。荡到利涉桥，上岸走走，见…</p>《第四十四回 汤总镇成功归故乡　余明经把酒问葬事》（余大先生）因走南京过，想起：“天长杜少卿住在南京利涉桥河房里，是我表弟，何不顺便去看看。”</p>", opts27);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow27,point27); //开启信息窗口
+	});	
+	
+var point28= new BMap.Point(118.795889,32.031111);        
+var marker = new BMap.Marker(point28,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts28 = {
+	  width : 600,     // 信息窗口宽度
+	  height: 300,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>花牌楼</h4>" , // 信息窗口标题
+	}
+	var infoWindow28 = new BMap.InfoWindow("介绍：“花牌楼早已不见踪影,作为巷名,亦早就并入太平南路。”朱元璋平定天下后，在南京城内为有大功之臣赐地建府，常遇春获准在今常府街一带建郑国公府，还修建富丽堂皇的牌楼以示表彰，常府街、花牌楼就因此而得名。到了民国年间，太平南路成为南京最繁华的商业中心，而花牌楼一段则成为知名的“书店一条街”，全国各大书店纷纷在此开设分店，如商务印书馆、中华书局等。</p>文本链接：</p>《第四十回 萧云仙广武山赏雪　沈琼枝利涉桥卖文》旗丁次日来回复道：“国子监问过来了。门上说，监里有个武相公叫做武书，是个上斋的监生，就在花牌楼住。”</p>", opts28);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow28,point28); //开启信息窗口
+	});	
+	
+var point29= new BMap.Point(118.79579,32.025498);        
+var marker = new BMap.Marker(point29,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts29 = {
+	  width : 600,     // 信息窗口宽度
+	  height: 300,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>文德桥</h4>" , // 信息窗口标题
+	}
+	var infoWindow29 = new BMap.InfoWindow("介绍：位于中国江苏省南京市夫子庙西，建于明万历年间.由于文德桥的特定位置和结构，在农历中秋之夜，只要是晴朗的天气，总能看到“龙抬头”的奇景。八月中秋和十一月十五日午夜前后，在文德桥东西两侧的秦淮河中，可以看到半个明晃晃的月亮。这就是人们所说的“龙抬头”。</p>文本链接：</p>《第四十一回 庄濯江话旧秦淮河　沈琼枝押解江都县》文德桥至利涉桥、东水关，夜夜笙歌不绝。又有那些游人买了水老鼠花在河内放，那水花直站在河里，放出来就和一树梨花一般。每夜直到四更时才歇。</p>《第五十四回 病佳人青楼算命　呆名士妓馆献诗》（陈和尚）吃饱了，就坐在文德桥测字的桌子上念诗，十分自在。</p>", opts29);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow29,point29); //开启信息窗口
+	});	
+	
+var point30= new BMap.Point(118.796264,32.057048);        
+var marker = new BMap.Marker(point30,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts30 = {
+	  width : 700,     // 信息窗口宽度
+	  height: 350,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>进香河</h4>" , // 信息窗口标题
+	}
+	var infoWindow30 = new BMap.InfoWindow("介绍：香河位于南京市玄武区，前身是吴大帝孙权开挖的人工河道——运渎的一部分，距今近已有1800年。朱元璋时期为纪念征战殁亡的功臣，在鸡笼山建功臣庙，并加宽运渎北段河道，方便官民乘船来进香祭祀。进香者皆由此河而来，故名进香河。那时进香河舟船不绝、热闹非凡。1959年，进香河被改为暗沟埋入地下，河道上方改造为道路，名“进香河路”，由北向南分别与东西向的北京东路、学府路、珠江路相交。路旁遍植杉树，两侧为东南大学校园和南京市审计署。</p>《第四十一回 庄濯江话旧秦淮河　沈琼枝押解江都县》杜少卿道：“正字兄，我和你先到淡冷处走走。”叫船家一路荡到进香河，又荡了回来，慢慢吃酒。吃到下午时候，两人都微微醉了。荡到利涉桥，上岸走走，见…</p>杜少卿到莲花桥来回拜，留着谈了一日。</p>转眼长夏已过又是新秋，清风戒寒，那秦淮河另是一番景致。满城的人都叫了船，请了大和尚在船上悬挂佛像，铺设经坛，从西水关起一路施食到进香河。</p>", opts30);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow30,point30); //开启信息窗口
+	});	
+	
+var point12= new BMap.Point(118.795944,32.055977);        
+var marker = new BMap.Marker(point12,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts12 = {
+	  width : 400,     // 信息窗口宽度
+	  height: 200,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>莲花桥</h4>" , // 信息窗口标题
+	}
+	var infoWindow12 = new BMap.InfoWindow("介绍：莲花桥位于南京市玄武区珠江路北进香河路南端，因桥东南有莲花庵而得名。</p>文本链接：</p>《第四十一回 庄濯江话旧秦淮河　沈琼枝押解江都县》杜少卿到莲花桥来回拜，留着谈了一日。</p>", opts12);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow12,point12); //开启信息窗口
+	});	
+		
+var point31= new BMap.Point(118.804119,32.030717);        
+var marker = new BMap.Marker(point31,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts31 = {
+	  width : 600,     // 信息窗口宽度
+	  height: 300,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>手帕巷（钓鱼巷）</h4>" , // 信息窗口标题
+	}
+	var infoWindow31 = new BMap.InfoWindow("介绍：钓鱼巷位于南京市秦淮区建康路东段南侧，东起秦淮河，西至西钓鱼巷。今已不在，成为居民小区。史书上讲的“六朝金粉地”是泛指南京，实指为夫子庙、钓鱼巷一带的内秦淮河两岸。在古代，钓鱼巷附近妓寮聚集，故钓鱼巷又叫“手帕巷”。</p>文本链接：</p>《第四十一回 庄濯江话旧秦淮河　沈琼枝押解江都县》沈琼枝告辞出门，上了轿，一直回到手帕巷。</p>《第四十二回 公子妓院说科场　家人苗疆报信息》（大爷、二爷）一路说着，就到了南京。管家尤胡子接着，把行李搬到钓鱼巷住下。</p>", opts31);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow31,point31); //开启信息窗口
+	});	
+
+var point32= new BMap.Point(118.802466,32.025952);        
+var marker = new BMap.Marker(point32,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts32 = {
+	  width : 600,     // 信息窗口宽度
+	  height: 350,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>鹫峰寺</h4>" , // 信息窗口标题
+	}
+	var infoWindow32 = new BMap.InfoWindow("介绍：鹫峰寺位于南京市秦淮区白鹭洲公园花圃区内，至今已有1600多年的历史，现存建筑始建于明朝天顺五年（1461年），为纪念唐朝名僧鹫峰而得名，是南京市文物保护单位。几度毁坏，几经重修，如今的鹫峰寺名气不在于曾经的得道高僧，也不在于昔日皇家恩宠，而是它美丽的山水园林。这里，风景独好。</p>文本链接：</p>《第四十二回 公子妓院说科场　家人苗疆报信息》大爷、二爷才住下，便摧着尤胡子，去买两顶新方巾；考蓝、钢铫、号顶、门帘、火炉、烛台、烛剪、卷袋，每样两件；赶着到鹫峰寺写卷头、交卷；又料理场食：月饼、蜜橙糕、莲米、圆眼肉、人参、炒米、酱瓜、生姜、板鸭。</p>大爷听了，慌叫在寓处取了灯笼来，照着走到鹫峰寺间壁。</p>", opts32);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow32,point32); //开启信息窗口
+	});
+	
+var point33= new BMap.Point(118.795612,32.06594);        
+var marker = new BMap.Marker(point33,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts33 = {
+	  width : 600,     // 信息窗口宽度
+	  height: 250,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>国子监</h4>" , // 信息窗口标题
+	}
+	var infoWindow33 = new BMap.InfoWindow("介绍：朝洪武十五年（1382年），奉明太祖朱元璋诏令建成的明代国家教育管理机构和最高学府南京国子监，初名大明国子监，设于京师应天府（今江苏省南京市）鸡笼山以南。</p>文本链接：</p>《第四十六回 三山门贤人饯别　五河县势利熏心》这汤镇台到国子监拜虞博士，那里留下帖，回了不在署。</p>", opts33);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow33,point33); //开启信息窗口
+	});
+	
+var point34= new BMap.Point(118.781948,32.038922);        
+var marker = new BMap.Marker(point34,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts34 = {
+	  width : 600,     // 信息窗口宽度
+	  height: 250,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>朝天宫</h4>" , // 信息窗口标题
+	}
+	var infoWindow34= new BMap.InfoWindow("介绍：朝天宫位于南京市秦淮区水西门内，是江南地区现存建筑等级最高、规模最大、保存最为完整的明清官式古建筑群落，素有“金陵第一胜迹”之美誉。朝天宫之名，由明太祖朱元璋下诏御赐，取“朝拜上天”、“朝见天子”之意，是明代皇室贵族焚香祈福的道场和节庆前文武百官演习朝拜天子礼仪的场所。</p>文本链接：</p>《第四十八回 徽州府烈妇殉夫　泰伯祠遗贤感旧》到了下处，邓质夫拜见了，说道：“小侄自别老伯，在扬州这四五年。近年，是东家托我来卖上江食盐，寓在朝天宫一向纪念老伯，近况好么？为什么也到南京来？”</p>", opts34);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow34,point34); //开启信息窗口
+	});
+	
+var point35= new BMap.Point(118.792808,32.023848);        
+var marker = new BMap.Marker(point35,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts35 = {
+	  width : 600,     // 信息窗口宽度
+	  height: 300,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>武定桥</h4>" , // 信息窗口标题
+	}
+	var infoWindow35= new BMap.InfoWindow("介绍：武定桥始建于南宋淳熙年间，旧名叫嘉瑞浮桥，因其位于长乐渡之上又称“上浮桥”。明代时，这座桥的旁边是大名鼎鼎的开国功臣、魏国公徐达的府邸，徐达死后得到的谥号是“武宁”，因此这座桥被称为“武宁桥”。到了清朝道光皇帝时，因为道光皇帝的名字是旻宁，要避讳，后取“文能安邦，武能定国”之意改称“武定桥”。明清至民国，这里妓院盛行，六朝金粉，笙歌不绝，建国后出现崭新的风貌。现在的武定桥是一座新旧结合的桥，中间为老桥，两侧的新桥修建于2001年。</p>文本链接：</p>《第五十三回 国公府雪夜留宾　来宾楼灯花惊梦》话说南京这十二楼，前门在武定桥，后门在东花园，钞库街的南首就是长板桥。自从太祖皇帝定天下，把那元朝功臣之后，都没入乐籍，有一个教坊司管着他们，也有衙役执事，一般也坐堂打人。</p>", opts35);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow35,point35); //开启信息窗口
+	});
+	
+
+	
+var point37= new BMap.Point(118.791554,32.027498);        
+var marker = new BMap.Marker(point37,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts37 = {
+	  width : 600,     // 信息窗口宽度
+	  height: 250,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>瞻园</h4>" , // 信息窗口标题
+	}
+	var infoWindow37= new BMap.InfoWindow("介绍：瞻园位于南京市秦淮区夫子庙秦淮风光带核心区，是南京现存历史最久的明代古典园林，是江南四大名园，其历史可追溯至明太祖朱元璋称帝前的吴王府，后赐予中山王徐达的府邸花园，素以假山著称，以欧阳修诗“瞻望玉堂，如在天上”而命名，明代被称为“南都第一园”。</p>文本链接：</p>《第五十三回 国公府雪夜留宾　来宾楼灯花惊梦》话说南京这十二楼，前门在武定桥，后门在东花园，钞库街的南首就是长板桥。自从太祖皇帝定天下，把那元朝功臣之后，都没入乐籍，有一个教坊司管着他们，也有衙役执事，一般也坐堂打人。</p>", opts37);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow37,point37); //开启信息窗口
+	});		
+
+	
+var point38= new BMap.Point(118.770324,32.056002);        
+var marker = new BMap.Marker(point38,{icon:myIcon3});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts38 = {
+	  width : 500,     // 信息窗口宽度
+	  height: 250,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>虎踞关</h4>" , // 信息窗口标题
+	}
+	var infoWindow38= new BMap.InfoWindow("介绍：虎踞关位于南京市鼓楼区清凉山东侧，南起广州路，北接西康路。</p>文本链接：</p>《第五十五回 添四客述往思来　弹一曲高山流水》又一个是卖火纸筒子的。这人姓王名太，他祖代是三牌楼卖菜的，到他父亲手里穷了，把菜园都卖掉了。后来，父亲死了，他无以为生，每日到虎踞关一带卖火纸筒过活。</p>", opts38);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow38,point38); //开启信息窗口
+	});
+	
+
+var point40= new BMap.Point(118.962245,32.156787);        
+var marker = new BMap.Marker(point40,{icon:myIcon2});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts40 = {
+	  width :400,     // 信息窗口宽度
+	  height: 200,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>栖霞山寺</h4>" , // 信息窗口标题
+	}
+	var infoWindow40= new BMap.InfoWindow("介绍：江苏省南京市栖霞区栖霞街84号</p>"+
+										  "文本链接：十娘有兄女曰媚姐，十三才有余，白皙，发覆额，眉目如画。余心爱之，媚亦知余爱，娇啼宛转，作掌中舞。十娘曰：“吾当为汝媒。”岁壬午，入棘闱。媚日以金钱投琼，卜余中否。及榜发，落第，余乃愤郁成疾，避栖霞山寺，经年不相闻矣。鼎革后，泰州刺史陈澹仙寓丛桂园，拥一姬，曰姓李。余披帏见之，媚也。</p>", opts40);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow40,point40); //开启信息窗口
+	});
+	
+
+
+var point42= new BMap.Point(118.796098,32.025658);        
+var marker = new BMap.Marker(point42,{icon:myIcon2});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts42 = {
+	  width : 600,     // 信息窗口宽度
+	  height: 300,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>旧院（曲中）</h4>" , // 信息窗口标题
+	}
+	var infoWindow42= new BMap.InfoWindow("介绍：前门对武定桥，后门在钞库街。与贡院遥对，仅隔一河</p>"+
+										  "【描述】“妓家鳞次，比屋而居，屋宇精洁，花木萧疏，迥非尘境。”</p>"+
+										  "【风俗】“到门则铜环半启，珠箔低垂；升阶则猧儿吠客，鹦哥唤茶；登堂则假母肃迎，分宾抗礼；进轩则丫鬟毕妆，捧艳而出；坐久则水陆备至，丝肉竞陈；定情则目眺心挑，绸缪宛转，纨绔少年，绣肠才子，无不魂迷色阵，气尽雌风矣。”</p>"+
+										  "瓜洲萧伯梁，豪华任侠，倾财结客，好游狭斜，久住曲中，投辖轰饮，俾昼作夜，多拥名姬，簪花击鼓为乐。曲中狎客：则有张卯官笛，张魁官箫，管五官管子，吴章甫弦索，钱仲文打十番鼓，丁继之、张燕筑、沈元甫、王公远、朱维章串戏，柳敬亭说书。</p>", opts42);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow42,point42); //开启信息窗口
+	});
+	
+var point43= new BMap.Point(118.619077,32.067617);        
+var marker = new BMap.Marker(point43,{icon:myIcon1});  // 创建标注	
+	map.addOverlay(marker);              // 将标注添加到地图中
+	var opts43 = {
+	  width : 700,     // 信息窗口宽度
+	  height: 350,     // 信息窗口高度
+	  title : "<h4 style='margin:0 0 5px 0;padding:0.2em 0'>浦口</h4>" , // 信息窗口标题
+	}
+	var infoWindow43= new BMap.InfoWindow("介绍：浦口区位于南京市西北部，是南京主城八区之一。</p>浦口区的主要景点有求雨山文化园、惠济寺公园、老鹰山观光塔、狮岭雄姿等30多处，其中“狮岭雄姿”景区为“金陵四十景”之一。“一代草圣、十里温泉、百里老山、千年银杏、万只白鹭、十万亩国家级森林公园”是对浦口旅游特色的生动概括。</p>文本链接:</p>《第二十一回 冒姓字小子求名　念亲戚老夫卧病》话说牛浦郎在甘露庵里读书，老和尚问他姓名，他上前作了一个揖，说道：“老师父，我姓牛，舍下就在这前街上住。因当初在浦口外婆家长的，所以小名就叫做浦郎…”</p>《第四十回 萧云仙广武山赏雪　沈琼枝利涉桥卖文》萧云仙从浦口过江，进了京城，验了札付，到了任，查点了运丁，看验了船只，同前任的官交代清楚。</p>", opts43);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow43,point43); //开启信息窗口
+	});
+
+	
+</script>  
+</body>  
+</html>
